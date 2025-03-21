@@ -1,0 +1,271 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>26/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Mar 21 02:10:37 PDT 2025</td>
+</tr>
+<tr><td>Total time:</td><td>1414 seconds (1414035 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User verifies scroll up and scroll down without using arrow button", "User Registration and Login"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [972d8e18a89308618894a4b79d81d519, get {url=https://automationexercise.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.118, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50394/devtoo..., se:cdpVersion: 134.0.6998.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 972d8e18a89308618894a4b79d81d519
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:424)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.ecommerce.utility.Base.getBrowser(Base.java:32)
+	at com.ecommerce.stepDefination.Hooks.before(Hooks.java:50)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2964)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2043975568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2043975568'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.28.1&apos;, revision: &apos;73f5ad48a2&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [972d8e18a89308618894a4b79d81d519, get {url=https://automationexercise.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.118, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50394/devtoo..., se:cdpVersion: 134.0.6998.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 972d8e18a89308618894a4b79d81d519
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:424)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.ecommerce.utility.Base.getBrowser(Base.java:32)
+	at com.ecommerce.stepDefination.Hooks.before(Hooks.java:50)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2964)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>187</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User adds a recommended item to the cart and verifies it", "User Registration and Login"</td>
+<td></td>
+<td>108</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User adds a review on a product", "Product Search Functionality"</td>
+<td></td>
+<td>142</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can add multiple products to cart and verify details", "Product Search Functionality"</td>
+<td></td>
+<td>34</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User submits the contact form successfully", "User Registration and Login"</td>
+<td></td>
+<td>106</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify category navigation for Women and Men products", "User Registration and Login"</td>
+<td></td>
+<td>17</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user can view product details", "Product Search Functionality"</td>
+<td></td>
+<td>98</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify product quantity is correctly updated in the cart", "Product Search Functionality"</td>
+<td></td>
+<td>18</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user is able to log in and log out successfully", "User Registration and Login"</td>
+<td></td>
+<td>25</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User navigates to the Test Cases page successfully", "User Registration and Login"</td>
+<td></td>
+<td>39</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify searched products remain in the cart after login", "Product Search Functionality"</td>
+<td></td>
+<td>41</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User places order and registers during checkout", "Product Search Functionality"</td>
+<td></td>
+<td>62</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User places an order after logging in", "Product Search Functionality"</td>
+<td></td>
+<td>51</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register and complete checkout process", "User Registration and Login"</td>
+<td></td>
+<td>152</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login with valid credentials", "User Registration and Login"</td>
+<td></td>
+<td>23</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User adds a review on a product", "Product Search Functionality"</td>
+<td></td>
+<td>22</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify product removal from cart", "User Registration and Login"</td>
+<td></td>
+<td>13</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify user cannot register with an already registered email", "User Registration and Login"</td>
+<td></td>
+<td>17</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User subscribes from Cart page", "Product Search Functionality"</td>
+<td></td>
+<td>17</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register a new user", "User Registration and Login"</td>
+<td></td>
+<td>39</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify search functionality on products page", "Product Search Functionality"</td>
+<td></td>
+<td>32</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Login User with incorrect credentials", "User Registration and Login"</td>
+<td></td>
+<td>18</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User adds a review on a product", "Product Search Functionality"</td>
+<td></td>
+<td>26</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User verifies scroll up and scroll down on home page", "User Registration and Login"</td>
+<td></td>
+<td>12</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User successfully subscribes using different emails", "User Registration and Login"</td>
+<td></td>
+<td>35</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify brand navigation and products visibility", "Product Search Functionality"</td>
+<td></td>
+<td>27</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+<tr>
+<td title='com.ecommerce.testRunners.RegisterRunner.runScenario()'><b>runScenario</b><br>Test class: com.ecommerce.testRunners.RegisterRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register a new user", "User Registration and Login"</td>
+<td></td>
+<td>38</td>
+<td>com.ecommerce.testRunners.RegisterRunner@3b0090a4</td></tr>
+</table><p>
+</body>
+</html>

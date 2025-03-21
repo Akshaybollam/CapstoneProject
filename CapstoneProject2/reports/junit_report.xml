@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="1,412.351" tests="27" skipped="0" failures="1" errors="0">
+<testcase classname="User Registration and Login" name="Register a new user - #1.1" time="39.26">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+And User enters a new "John" and "john4006@gmail.com" address...............passed
+And User clicks on Signup button............................................passed
+Then User should see ENTER ACCOUNT INFORMATION form.........................passed
+And User enters account details.............................................passed
+And User enters personal details and address information....................passed
+And User clicks on Create Account button....................................passed
+Then User should see "Account Created!" message.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Register a new user - #1.2" time="38.158">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+And User enters a new "Emily" and "emily78@gmail.com" address...............passed
+And User clicks on Signup button............................................passed
+Then User should see ENTER ACCOUNT INFORMATION form.........................passed
+And User enters account details.............................................passed
+And User enters personal details and address information....................passed
+And User clicks on Create Account button....................................passed
+Then User should see "Account Created!" message.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Login with valid credentials - #1.1" time="23.342">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+Then User should see "Login to your account"................................passed
+And User enters valid "testuser23@test.com" and "Akshay2001@"...............passed
+Then User clicks on Login button............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Login User with incorrect credentials - #1.1" time="17.998">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+And User enters invalid "wronguser@test.com" and "Wrong123".................passed
+And User clicks on Login button.............................................passed
+Then User should see "Invalid login credentials" error message..............passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify user is able to log in and log out successfully - #1.1" time="25.07">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+Then I should see Login to your account.....................................passed
+When I enter valid email "testuser23@test.com" and password "Akshay2001@"...passed
+And I click on the Login button.............................................passed
+Then I should see Logged in as "Testuser"...................................passed
+When I click on the Logout button...........................................passed
+Then I should be navigated back to the login page...........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify user cannot register with an already registered email - #1.1" time="17.588">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+Then User should see New User Signup! text..................................passed
+When User enters name "Akshay" and already registered email "bollamakshay756@gmail.com".passed
+And User clicks on the Signup button........................................passed
+Then User should see an error message "Email Address already exist!"........passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User submits the contact form successfully" time="106.229">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When I navigate to the Contact Us page......................................passed
+Then I should see the GET IN TOUCH heading..................................passed
+When I fill in the contact form with details................................passed
+And I upload a file.........................................................passed
+And I click the Submit button and accept the alert..........................passed
+Then I should see the success message Success! Your details have been submitted successfully..passed
+When I click the Home button................................................passed
+Then I should be redirected to the home page................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User navigates to the Test Cases page successfully" time="39.562">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When I click on the Test Cases button.......................................passed
+Then I should be redirected to the Test Cases page..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User successfully subscribes using different emails - #1.1" time="35.028">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When I scroll down to the Subscription section..............................passed
+And I enter my email "user1@test.com" and click subscribe...................passed
+Then I should see the success message You have been successfully subscribed!.passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User adds a recommended item to the cart and verifies it" time="108.663">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User scrolls to the bottom of the page.................................passed
+Then User should see the RECOMMENDED ITEMS section..........................passed
+When User clicks Add To Cart on a recommended product.......................passed
+And User clicks View Cart button............................................passed
+Then The product should be displayed in the cart............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User verifies scroll up and scroll down on home page" time="12.343">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+Then I should see the home page.............................................passed
+When I scroll down to the bottom of the page................................passed
+Then I should see Subscription text.........................................passed
+When I click on the button arrow button.....................................passed
+Then I should see expectedText on screen....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="User verifies scroll up and scroll down without using arrow button" time="187.515">
+<failure type="org.openqa.selenium.TimeoutException" message="java.util.concurrent.TimeoutException
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [972d8e18a89308618894a4b79d81d519, get {url=https://automationexercise.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.118, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50394/devtoo..., se:cdpVersion: 134.0.6998.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 972d8e18a89308618894a4b79d81d519">
+<![CDATA[org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: '4.28.1', revision: '73f5ad48a2'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '23.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [972d8e18a89308618894a4b79d81d519, get {url=https://automationexercise.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.118, chrome: {chromedriverVersion: 134.0.6998.90 (219ee74681fc..., userDataDir: C:\Windows\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50394}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50394/devtoo..., se:cdpVersion: 134.0.6998.118, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 972d8e18a89308618894a4b79d81d519
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:424)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:212)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:313)
+	at com.ecommerce.utility.Base.getBrowser(Base.java:32)
+	at com.ecommerce.stepDefination.Hooks.before(Hooks.java:50)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2964)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User is on the homepage...............................................skipped
+Then I  see the home page...................................................skipped
+When I scroll  to the bottom of the page....................................skipped
+Then I should see section Subscription......................................skipped
+When I scroll u to the top of the page......................................skipped
+Then I should see expectedText..............................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify product removal from cart" time="13.642">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+And I click on View Product.................................................passed
+When I add a product to the cart............................................passed
+And click continue shopping.................................................passed
+And I navigate to the cart page.............................................passed
+Then I should see the cart page displayed...................................passed
+When I remove a product from the cart.......................................passed
+Then I should see the product is removed....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Verify category navigation for Women and Men products" time="16.975">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+Then I should see categories on the left sidebar............................passed
+When I click on the Women category..........................................passed
+And I click on the Dress sub-category under Women...........................passed
+Then I should see the WOMEN - DRESS PRODUCTS page...........................passed
+When I click on the Men category............................................passed
+And I click on the Jeans sub-category under Men.............................passed
+Then I should see the MEN - JEANS PRODUCTS page.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Registration and Login" name="Register and complete checkout process" time="152.001">
+<system-out><![CDATA[
+Given User is on the homepage...............................................passed
+When User clicks on Signup or Login button..................................passed
+When I enter signup details with name "John Doenc" and email "johndoe14978@example.com".passed
+And I enter account details with password "password123", day "10", month "January", year "1990".passed
+And I enter address details "John", "Doe", "Company", "123 Street", "Apt 4B", "United States", "California", "Los Angeles", "90001", "1234567890".passed
+Then I should see account created message...................................passed
+When I click Continue.......................................................passed
+Then I should be logged in as a user........................................passed
+When I add products to cart and go to cart page.............................passed
+And I proceed with checkout.................................................passed
+Then I should see address and order review details..........................passed
+When I enter comment "Please deliver soon" and place the order..............passed
+And I enter the payment details "John Doe", "4111111111111111", "123", "12", "2025".passed
+And I confirm  order........................................................passed
+Then I should see success message...........................................passed
+When I delete the account...................................................passed
+Then I should see account deleted message...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="Verify search functionality on products page" time="32.905">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When User clicks on the Products button.....................................passed
+Then User should be navigated to the ALL PRODUCTS page......................passed
+When User enters product name "T-Shirt" in search input and clicks search button.passed
+Then User should see the SEARCHED PRODUCTS section..........................passed
+And User should see all related products displayed..........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="Verify user can view product details" time="98.058">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When User clicks on the Products button.....................................passed
+Then User should be navigated to the ALL PRODUCTS page......................passed
+And The products list should be visible.....................................passed
+When User clicks on View Product of the first product.......................passed
+Then User should be navigated to the product detail page....................passed
+And User should see the product details: name, category, price, availability, condition, brand.passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="Verify user can add multiple products to cart and verify details - #1.1" time="34.049">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click on the Products button.........................................passed
+And I hover over the first product and add it to the cart...................passed
+And I click Continue Shopping...............................................passed
+And I hover over the second product and add it to the cart..................passed
+And I click View Cart button................................................passed
+Then Both products should be in the Cart with "Blue Top" and "Men Tshirt"...passed
+And Product details should be "Rs. 500", "Rs. 400", "Rs. 500", "Rs. 400"....passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="User subscribes from Cart page - #1.1" time="17.415">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When User clicks on the Cart button and scrolls to footer...................passed
+Then SUBSCRIPTION text should be visible....................................passed
+When User enters email "testuser1@mail.com" and clicks the subscribe button.passed
+Then Subscription success message should be displayed.......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="Verify product quantity is correctly updated in the cart - #1.1" time="18.633">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click on View Product for a product..................................passed
+And I verify the product detail page is opened..............................passed
+And I increase the quantity to 4............................................passed
+And I click on Add to cart button...........................................passed
+And I click on View Cart button.............................................passed
+Then The cart should contain product with quantity 4........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="User adds a review on a product - #1.1" time="26.333">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click on Products button.............................................passed
+Then I should be navigated to ALL PRODUCTS page.............................passed
+When I click on View Product button.........................................passed
+Then I should see Write Your Review section.................................passed
+When I enter "John Doe", "john@example.com", and "Great quality product!"...passed
+And I click on Submit button................................................passed
+Then I should see success message Thank you for your review.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="User adds a review on a product - #1.2" time="22.737">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click on Products button.............................................passed
+Then I should be navigated to ALL PRODUCTS page.............................passed
+When I click on View Product button.........................................passed
+Then I should see Write Your Review section.................................passed
+When I enter "Alice Smith", "alice@gmail.com", and "Fast shipping, loved it!".passed
+And I click on Submit button................................................passed
+Then I should see success message Thank you for your review.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="User adds a review on a product - #1.3" time="142.518">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click on Products button.............................................passed
+Then I should be navigated to ALL PRODUCTS page.............................passed
+When I click on View Product button.........................................passed
+Then I should see Write Your Review section.................................passed
+When I enter "Mike Ross", "mike.ross@test.com", and "Highly recommended!"...passed
+And I click on Submit button................................................passed
+Then I should see success message Thank you for your review.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="Verify brand navigation and products visibility" time="27.436">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click on the Products button.........................................passed
+Then I should see the Brands sidebar on the left............................passed
+When I click on the first brand.............................................passed
+Then I should see the first brand's product page displayed..................passed
+When I click on the second brand............................................passed
+Then I should see the second brand's product page displayed.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="Verify searched products remain in the cart after login - #1.1" time="41.478">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click  Products button...............................................passed
+Then I should be navigated to the All Products page.........................passed
+When I search for "Men Tshirt"..............................................passed
+Then I should see SEARCHED PRODUCTS.........................................passed
+And I should see all searched products......................................passed
+Then I click on the view product............................................passed
+And I click on the Add to Cart..............................................passed
+Then I click on continue shopping...........................................passed
+When I click  Signup or Login button........................................passed
+And I enter emailid "bollamakshay756@gmail.com" and password "Akshay2001@"..passed
+And I click on Login........................................................passed
+And I navigate back to the Cart page........................................passed
+Then I should see the products in the cart after login......................passed
+When I remove all products from the cart....................................passed
+Then I should see Cart is empty! Click here to buy products.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="User places order and registers during checkout - #1.1" time="62.618">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+When I click on products in home page.......................................passed
+And I add product into cart.................................................passed
+And I go to cart page.......................................................passed
+Then I should able to see the cart page.....................................passed
+When I proceed to checkout..................................................passed
+When I click on Register or Login buttons...................................passed
+When I fill in the signup details with "John Doe", "john14582@example.com", "Password123", "John", "Doe","TechCorp", "123 Main St", "California", "Los Angeles", "90001", "9876543210".passed
+Then I should see account created message and click continue................passed
+Then I should be logged in as user..........................................passed
+When I go to cart page again................................................passed
+And I proceed to checkout after login.......................................passed
+Then I should see address details and review order section..................passed
+When I enter "Please deliver quickly" in comment text area and place the order.passed
+And I enter payment details with "John Doe", "4111111111111111", "123", "12", "2026".passed
+And I confirm the order.....................................................passed
+Then I should see order confirmation message................................passed
+When I delete my account....................................................passed
+Then I should see account deleted message and click continue................passed
+]]></system-out>
+</testcase>
+<testcase classname="Product Search Functionality" name="User places an order after logging in - #1.1" time="51.505">
+<system-out><![CDATA[
+Given User is on the home page..............................................passed
+And I click on Signup or Login button.......................................passed
+When I enter email "bollamakshay756@gmail.com" and password "Akshay2001@"...passed
+And I click on Login button.................................................passed
+Then I should see Logged in as username at the top..........................passed
+And I click on products.....................................................passed
+When I click on view product................................................passed
+And I click on the Add to cart button.......................................passed
+Then I click on view cart...................................................passed
+Then I should see the cart page is displayed................................passed
+When I click on Proceed to Checkout.........................................passed
+Then I should see Address Details and Review Order sections.................passed
+When I enter "Please deliver by 5 PM" in the comment text area..............passed
+And I click on Place Order button...........................................passed
+When I enter payment details "John Doe", "4111111111111111", "123", "12", "2025".passed
+And I click on Pay and Confirm Order button.................................passed
+Then I should see Congratulations! Your order has been confirmed!...........passed
+And Download the Invoice....................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
